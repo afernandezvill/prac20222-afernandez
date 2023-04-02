@@ -1,16 +1,14 @@
 version: '3.9'
 services:
-axsobd:
+axso-bd:
   mysql:
     image: mysql:5.7
-  volumes:
-  - "./.mysql-data/db/db:/var/lib/mysql"
-  restart: always
+ 
   ports:
   - "3306:3306"
   envioroment:
   MYSQL_ROOT_PASSWORD: afernandez
-  MYSQL_DATABASE: axsobd
+  MYSQL_DATABASE: axso-bd
   MYSQL_USER: afernandez
   MYSQL_PASSWORD: practica2023
 
