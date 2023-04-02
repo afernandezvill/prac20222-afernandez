@@ -4,6 +4,8 @@ axso-bd:
   mysql:
     image: mysql:5.7
     container_name: mysql
+    volumes:
+    - mysql-data:/var/lib/mysql
  
   ports:
   - "3306:3306"
@@ -12,4 +14,7 @@ axso-bd:
   MYSQL_DATABASE: axso-bd
   MYSQL_USER: afernandez
   MYSQL_PASSWORD: practica2023
+  
+volumes:
+  mysql-dat:
 
