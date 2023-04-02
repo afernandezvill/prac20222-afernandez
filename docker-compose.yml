@@ -1,6 +1,8 @@
 version: '3.9'
 services:
-  axsobd:
+axsobd:
+  mysql:
+    image: mysql:5.7
   volumes:
   - "./.mysql-data/db/db:/var/lib/mysql"
   restart: always
@@ -11,6 +13,4 @@ services:
   MYSQL_DATABASE: axsobd
   MYSQL_USER: afernandez
   MYSQL_PASSWORD: practica2023
-  mysql:
-    image: mysql:5.7
-    container_name: mysql
+
