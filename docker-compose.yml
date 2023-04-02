@@ -5,7 +5,7 @@ axso-bd:
     image: mysql:5.7
     container_name: mysql
     volumes:
-    - mysql-data: mysql-db-data
+    - mysql-data:/var/lib/mysql
  
   ports:
   - "3306:3306"
@@ -16,5 +16,5 @@ axso-bd:
   MYSQL_PASSWORD: practica2023
   
 volumes:
-  mysql-dat:
+  mysql-data:
 
