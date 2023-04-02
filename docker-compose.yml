@@ -5,7 +5,7 @@ axso-bd:
     image: mysql:5.7
     container_name: mysql
     volumes:
-    - mysql-data:/var/lib/mysql
+    - mysql-data: mysql-db-data
  
   ports:
   - "3306:3306"
