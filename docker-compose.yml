@@ -1,15 +1,15 @@
 version: '3.9'
 services:
-  axso-bd:
+   axso-db:
     image: mysql:5.7
     volumes:
       - "./.mysql-data/db:/var/lib/mysql"
     restart: always
     ports:
       - 3306:3306
- environment:
+    environment:
       MYSQL_ROOT_PASSWORD: rootpw
-      MYSQL_DATABASE: axso-db
+      MYSQL_DATABASE: axso-bd
       MYSQL_USER: afernandez
       MYSQL_PASSWORD: afernandez
   
