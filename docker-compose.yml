@@ -7,11 +7,9 @@ services:
     restart: always
     ports:
       - 3306:3306
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpw
-      MYSQL_DATABASE: axsobd
-      MYSQL_USER: afernandez
-      MYSQL_PASSWORD: afernandez
+ 
+ env_file:
+      -env_file.env
   
 
  
