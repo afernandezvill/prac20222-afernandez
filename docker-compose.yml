@@ -10,6 +10,12 @@ services:
       - 3306:3306
     env_file: pass.env
     
+    web:
+    build: .
+    ports:
+      - "8000:5000"
+  redis:
+    image: "redis:alpine"
     
   
 
