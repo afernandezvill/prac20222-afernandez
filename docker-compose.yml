@@ -11,7 +11,8 @@ services:
     env_file: pass.env
     
     web:
-    build: .
+    build: ./web
+    container_name: web
     ports:
       - 8000:5000
   redis:
