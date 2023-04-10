@@ -10,8 +10,7 @@ services:
       - 3306:3306
     env_file: pass.env#
     
-    
-services:    
+       
     web:
     build: ./web
     container_name: web
