@@ -14,7 +14,7 @@ services:
        
     web:
     build: ./web
-    container_name: web
+    
     
 
     
