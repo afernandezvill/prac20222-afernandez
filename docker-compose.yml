@@ -9,7 +9,12 @@ services:
     ports:
       - 3306:3306
      
-    env_file: pass.env#
+    env_file: pass.env
+    
+    flask_app:
+    image: awesome-flask
+    ports:
+      - 8000:8000
     
        
  
