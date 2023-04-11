@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-    mysql: axso-db
+    axso-db:
     image: mysql:5.7
     container_name: mysql
     volumes:
@@ -8,7 +8,6 @@ services:
     restart: always
     ports:
       - 3306:3306
-     
     env_file: pass.env
     
    
