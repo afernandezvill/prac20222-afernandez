@@ -1,10 +1,12 @@
-FROM python:3.11.2-alpine
-WORKDIR /usr/src/app
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
-RUN apk add --no-cache gcc musl-dev linux-headers
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+FROM python:3.10-alpine
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip3 install -r requirements.txt
+
+COPY . .
+
 EXPOSE 8000
-COPY . /usr/src/app
-CMD ["flask", "run"]
+
+CMD ["python3", "app.py"]
