@@ -2,7 +2,7 @@ version: '3.9'
 services:
     mysql: axso-db
     image: mysql:5.7
-    container_name: mysqlcontainer
+    container_name: mysql
     volumes:
       - "./.mysql-data/db:/var/lib/mysql"
     restart: always
