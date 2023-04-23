@@ -1,6 +1,6 @@
 FROM python:3.10-alpine
 WORKDIR /usr/src/app
-ENV FLASK_APP app.py
+ENV FLASK_APP web/app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 ENV FLASK_ENV=development
 RUN apk add --no-cache gcc musl-dev linux-headers
