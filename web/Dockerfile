@@ -1,12 +1,12 @@
 FROM python:3.10-alpine
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-COPY requirements.txt .
+COPY requirements.txt ./
 RUN pip3 install -r requirements.txt
 
 COPY . .
 
 EXPOSE 8000
 
-CMD ["python3", "app.py"]
+CMD ["flask", "python3", "app.py", "run"]
