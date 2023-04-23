@@ -9,9 +9,6 @@ services:
     ports:
       - 3306:3306
     env_file: pass.env
-volumes:
-   mysql_data:
-   
     web:
       build: ./web
       container_name: web
