@@ -12,7 +12,12 @@ services:
 volumes:
    mysql_data:
    
-    
+    web:
+      build: ./web
+      container_name: web
+      ports:
+        - 5000:5000
+       
    
     
        
