@@ -3,4 +3,4 @@ WORKDIR /usr/src/app
 COPY app/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 COPY . .
-CMD ["phyton3", "flask", "run", "--port", "5000"]
+CMD ["phyton3", "flask", "run"]
