@@ -10,7 +10,7 @@ services:
       - '3310:3306'
     environment:
       MYSQL_ROOT_PASSWORD: rootpw
-      MYSQL_DATABASE: mysqlDB
+      MYSQL_DATABASE: axso-db
       MYSQL_USER: afernandez
       MYSQL_PASSWORD: afernandez
   web:
@@ -21,7 +21,7 @@ services:
     depends_on:
       - mysql
     environment:
-      MYSQL_DATABASE: mysqlDB
+      MYSQL_DATABASE: axso-db
       MYSQL_USER: afernandez
       MYSQL_PASSWORD: afernandez
 
