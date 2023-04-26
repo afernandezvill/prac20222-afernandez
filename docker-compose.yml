@@ -16,7 +16,7 @@ services:
       - '5000:5000'
     depends_on:
       - mysql
-   env_file: pass.env
+    env_file: pass.env
       
        
    
