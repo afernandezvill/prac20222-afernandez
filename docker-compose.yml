@@ -16,10 +16,7 @@ services:
       - '5000:5000'
     depends_on:
       - mysql
-    environment:
-      MYSQL_DATABASE: axso-db
-      MYSQL_USER: afernandez
-      MYSQL_PASSWORD: afernandez
+   env_file: pass.env
       
        
    
