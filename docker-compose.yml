@@ -2,14 +2,17 @@ version: '3.9'
 services:
   mysql:
     image: mysql:5.7
-    container_name: mysqlcontainer1
+    container_name: mysqlcontainer
     volumes:
       - './.mysql_data/db:/var/lib/mysql'
     restart: always
     ports:
-      - '3306:3306'
+      - '3310:3306'
     environment:
-       env_file: pass.env
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: axso-db
+      MYSQL_USER: afernandez
+      MYSQL_PASSWORD: afernandez
   web:
     build: ./web
     container_name: web
@@ -18,8 +21,9 @@ services:
     depends_on:
       - mysql
     environment:
-      env_file: pass.env
-
+      MYSQL_DATABASE: axso-db
+      MYSQL_USER: afernandez
+      MYSQL_PASSWORD: afernandez
       
        
    
