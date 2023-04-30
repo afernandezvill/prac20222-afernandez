@@ -8,7 +8,11 @@ services:
     restart: always
     ports:
       - '3306:3306'
-    env_file: pass.env
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: axso-db
+      MYSQL_USER: afernandez
+      MYSQL_PASSWORD: afernandez
   web:
     build: ./web
     container_name: web
@@ -16,7 +20,10 @@ services:
       - '8000:5000'
     depends_on:
       - mysql
-    env_file: pass.env
+    environment:
+      MYSQL_DATABASE: axso-db
+      MYSQL_USER: afernandez
+      MYSQL_PASSWORD: afernandez
       
        
    
