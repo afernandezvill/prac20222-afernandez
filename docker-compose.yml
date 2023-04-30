@@ -21,6 +21,7 @@ services:
     depends_on:
       - mysql
     environment:
+      MYSQL_ROOT_PASSWORD: rootpw
       MYSQL_DATABASE: axso-db
       MYSQL_USER: afernandez
       MYSQL_PASSWORD: afernandez
