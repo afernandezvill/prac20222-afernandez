@@ -7,9 +7,9 @@ services:
       - './.mysql_data/db:/var/lib/mysql'
     restart: always
     ports:
-      - '3310:3306'
+      - '3306:3306'
     environment:
-      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_ROOT_PASSWORD: afernandez
       MYSQL_DATABASE: axso-db
       MYSQL_USER: afernandez
       MYSQL_PASSWORD: afernandez
@@ -21,6 +21,7 @@ services:
     depends_on:
       - mysql
     environment:
+      MYSQL_ROOT_PASSWORD: afernandez
       MYSQL_DATABASE: axso-db
       MYSQL_USER: afernandez
       MYSQL_PASSWORD: afernandez
