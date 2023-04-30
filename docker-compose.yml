@@ -7,16 +7,16 @@ services:
       - './.mysql_data/db:/var/lib/mysql'
     restart: always
     ports:
-      - '3310:3306'
+      - '3306:3306'
     env_file: pass.env
-  web:
-    build: ./web
-    container_name: web
-    ports:
-      - '5000:5000'
-    depends_on:
-      - mysql
-    env_file: pass.env
+ # web:
+  #  build: ./web
+   # container_name: web
+    #ports:
+     # - '5000:5000'
+    #depends_on:
+     # - mysql
+    #env_file: pass.env
       
        
    
