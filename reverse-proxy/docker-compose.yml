@@ -1,0 +1,13 @@
+version: "3.6"
+services:
+  proxy:
+    build: .
+    container_name: reverse_proxy
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - web-network
+ networks:
+   web-network:
+     name: web-network
