@@ -13,6 +13,8 @@ services:
       MYSQL_DATABASE: axso-db
       MYSQL_USER: afernandez
       MYSQL_PASSWORD: afernandez
+    networks:
+      - db-network
   web:
     build: ./web
     container_name: web
@@ -25,6 +27,17 @@ services:
       MYSQL_DATABASE: axso-db
       MYSQL_USER: afernandez
       MYSQL_PASSWORD: afernandez
+      
+      networks:
+        - web-network
+        - db-network
+    volumes:
+      mysql-data:
+    network:
+      web-network:
+        name: web-network
+      db-network:
+        name: db-network
        
    
     
