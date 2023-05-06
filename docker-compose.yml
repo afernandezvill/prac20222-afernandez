@@ -27,7 +27,7 @@ services:
       MYSQL_DATABASE: axso-db
       MYSQL_USER: afernandez
       MYSQL_PASSWORD: afernandez
-      
+    #  
       networks:
         - web-network
         - db-network
@@ -38,7 +38,7 @@ network:
     name: web-network
   db-network:
     name: db-network
-       
+       #
    
     
        
