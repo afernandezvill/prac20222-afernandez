@@ -31,13 +31,13 @@ services:
       networks:
         - web-network
         - db-network
-    volumes:
-      mysql-data:
-    network:
-      web-network:
-        name: web-network
-      db-network:
-        name: db-network
+volumes:
+  mysql-data:
+network:
+  web-network:
+    name: web-network
+  db-network:
+    name: db-network
        
    
     
