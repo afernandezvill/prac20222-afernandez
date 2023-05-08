@@ -27,10 +27,7 @@ services:
       MYSQL_USER: afernandez
       MYSQL_PASSWORD: afernandez
       
-   
-volumes:
-  mysql_data:
-network:
+networks:
   web-network:
     name: web-network
   db-network:
