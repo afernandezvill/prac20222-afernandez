@@ -1,2 +1,2 @@
 FROM nginx
-COPY ngnix.conf /etc/nginx/default.conf
+COPY ngnix.conf /usr/sbin/nginx
