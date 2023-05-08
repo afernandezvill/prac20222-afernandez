@@ -13,6 +13,8 @@ services:
       MYSQL_DATABASE: axso-db
       MYSQL_USER: afernandez
       MYSQL_PASSWORD: afernandez
+    networks:
+      - db-network
     
   web:
     build: ./web
