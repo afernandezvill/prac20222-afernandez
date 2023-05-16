@@ -7,8 +7,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    #networks:
-      #- web-network
+    networks:
+      - web-network
 networks:
   web-network:
     name: web-network
