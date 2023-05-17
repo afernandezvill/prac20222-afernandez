@@ -4,9 +4,6 @@ services:
     image: nginx
     volumes:
       - "./conf:/etc/nginx/conf.d"
-    ports:
-      - "8000:80"
-      - "443:443"
     networks:
       - web-network
 networks:
