@@ -1,15 +1,12 @@
 version: "3.6"
 services:
-  proxy:
-    build: .
-    container_name: reverse_proxy
   nginx:
     image: nginx
     volumes:
       - "./conf:/etc/nginx/conf.d"
     ports:
-      - 80:80
-      - 443:443
+      - "80:80"
+      - "443:443"
     networks:
       - web-network
 networks:
