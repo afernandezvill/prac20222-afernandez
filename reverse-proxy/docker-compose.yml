@@ -1,15 +1,13 @@
 version: "3.6"
 services:
-  nginx:
-    image: nginx
-    volumes:
-      - "./conf:/etc/nginx/conf.d"
-     ports:
-     
-      - "80:8000"
+  proxy:
+    build: .
+    container_name: reverse_proxy
+    ports:
+      - 80:8000
       
     networks:
       - web-network
-networks:
-  web-network:
-    name: web-network
+ networks:
+   web-network:
+     name: web-network
