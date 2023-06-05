@@ -1,5 +1,5 @@
 FROM nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY nginx_Certificate.crt /etc/ssl/certs/nginx_Certificate.crt
-COPY nginx_Private.key /etc/ssl/certs/nginx_Private.key
+COPY nginx-selfsigned.crt /etc/ssl/certs/nginx-selfsigned.crt
+COPY nginx-selfsigned.key /etc/ssl/private/nginx-selfsigned.key
 
